@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+<title>Employee Shift-Swap System</title>
+ 
+</head>
+ 
+<body class="swap-page">
+<div class="swap-container">
+ 
+    <header class="swap-header">
+<h1 class="swap-title">Employee Shift-Swap System</h1>
+<p class="swap-description">
+            Submit a request to exchange your scheduled shift with another eligible employee.
+</p>
+</header>
+ 
+    <main>
+ 
+        <section class="card section">
+<h2>Before You Submit a Shift-Swap Request</h2>
+<p>Enter both employees’ IDs and the start and end date and time for each scheduled shift.
+                 All fields are required. The request will be sent to the receiving employee and, when required, a manager for review.
+ 
+            </p>
+</section>
+ 
+        <section>
+<h2>Shift-Swap Request</h2>
+<form method="post">
+<fieldset>
+<legend>Employee Information</legend>
+<p>
+<label class="form-label" for="requester_employee_id">
+                Requesting Employee ID
+</label>
+<br>
+<input
+                type="text"
+                id="requester_employee_id"
+                name="requester_employee_id"
+                required
+>
+</p>
+ 
+        <p>
+<label for="target_employee_id">
+                Receiving Employee ID
+</label>
+<br>
+<input
+                type="text"
+                id="target_employee_id"
+                name="target_employee_id"
+                required
+>
+</p>
+</fieldset>
+<fieldset>
+<legend>Scheduled Shift Information</legend>
+ 
+    <p>
+<label for="requester_shift_start">
+            Requester Shift Start
+</label>
+<br>
+<input
+            type="datetime-local"
+            id="requester_shift_start"
+            name="requester_shift_start"
+            required
+>
+</p>
+ 
+    <p>
+<label for="requester_shift_end">
+            Requester Shift End
+</label>
+<br>
+<input
+            type="datetime-local"
+            id="requester_shift_end"
+            name="requester_shift_end"
+            required
+>
+</p>
+ 
+    <p>
+<label for="target_shift_start">
+            Receiving Employee Shift Start
+</label>
+<br>
+<input
+            type="datetime-local"
+            id="target_shift_start"
+            name="target_shift_start"
+            required
+>
+</p>
+ 
+    <p>
+<label for="target_shift_end">
+            Receiving Employee Shift End
+</label>
+<br>
+<input
+            type="datetime-local"
+            id="target_shift_end"
+            name="target_shift_end"
+            required
+>
+</p>
+<p>
+<label for="target_weekly_hours">
+          Receiving Employee Weekly Hours After Swap
+</label>
+<br>
+<input
+          type="number"
+          id="target_weekly_hours"
+          name="target_weekly_hours"
+          min="0"
+          step="0.5"
+          required
+>
+</p>
+<p id="overtime_message" aria-live="polite"></p>
+<p id="shift_time_message" aria-live="polite"></p>
+<p id="form_message" aria-live="polite"></p>
+</fieldset>
+<p>
+<button type="submit">
+        Submit Shift-Swap Request
+</button>
+</p>
+</form>
+</section>
+ 
+    </main>
+ 
+    <footer>
+<p>MIS 3371 - Employee Shift-Swap System</p>
+</footer>
+</div>
+</body>
+</html>

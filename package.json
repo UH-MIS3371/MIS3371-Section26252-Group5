@@ -1,0 +1,29 @@
+{
+  "name": "mis3371-employee-shift-swap",
+  "version": "1.0.0",
+  "private":"true",
+  "description": "This repository contains the Milestone 1 documentation and future capstone project files for the Employee Shift-Swap System in MIS 3371-26252.",
+  "main": "week9-api.js",
+  "directories": {
+    "doc": "docs"
+  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "node server/server.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimmaedi/mis3371-employee-shift-swap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nimmaedi/mis3371-employee-shift-swap/issues"
+  },
+  "homepage": "https://github.com/nimmaedi/mis3371-employee-shift-swap#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
