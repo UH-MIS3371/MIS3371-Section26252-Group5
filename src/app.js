@@ -113,6 +113,7 @@ requesterStartInput.addEventListener("change", updateShiftTimeMessage);
 requesterEndInput.addEventListener("change", updateShiftTimeMessage);
 targetStartInput.addEventListener("change", updateShiftTimeMessage);
 targetEndInput.addEventListener("change", updateShiftTimeMessage);
+// Add the form submit event listener
 shiftSwapForm.addEventListener("submit", handleFormSubmit);
  
 // Test below, at, and above the 40-hour limit

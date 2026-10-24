@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json({ limit: "20kb"}));
 
-app.use(express.static(path.join(__dirname, "..", "src")));
+app.use(express.static(path.join(__dirname, "..")));
 
 app.post("/api/shift-swaps", (req, res) => {
     const swapRequest = req.body;
