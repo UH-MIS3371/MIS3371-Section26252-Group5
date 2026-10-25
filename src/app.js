@@ -114,7 +114,7 @@ requesterEndInput.addEventListener("change", updateShiftTimeMessage);
 targetStartInput.addEventListener("change", updateShiftTimeMessage);
 targetEndInput.addEventListener("change", updateShiftTimeMessage);
 // Add the form submit event listener
-shiftSwapForm.addEventListener("submit", handleFormSubmit);
+// Submission is handled in week9-api.js.
  
 // Test below, at, and above the 40-hour limit
 console.log("39 hours:", checkOvertime(39));
