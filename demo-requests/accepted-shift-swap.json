@@ -1,1 +1,9 @@
-{}
+{
+    "requestingEmployeeId": "EMP-001",
+    "receivingEmployeeId": "EMP-002",
+    "requesterStart": "2026-10-27T09:00",
+    "requesterEnd": "2026-10-27T17:00",
+    "receivingStart": "2026-10-28T08:00",
+    "receivingEnd": "2026-10-28T16:00",
+    "receivingWeeklyHours": 40
+  }

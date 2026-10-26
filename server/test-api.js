@@ -31,6 +31,16 @@ async function checkAPI(data, expectedStatus, expectedReview) {
         });
 
         const result = await response.json();
+        console.log("Expected:", {
+            httpStatus: expectedStatus,
+            success: expectedStatus === 200,
+            managerReviewRequired: expectedReview
+        });
+        
+        console.log("Actual:", {
+            httpStatus: response.status,
+            ...result
+        });
 
         assert.equal(response.status, expectedStatus);
         assert.equal(result.success, expectedStatus === 200);
@@ -66,15 +76,15 @@ test("Missing employee ID", async () => {
     await checkAPI(data, 400);
 });
 
-// Test 5: Same employee ID
-test("Same employee ID", async () => {
-    const data = { ...request, receivingEmployeeId: "EMP-001" };
+// Test 5: Equal start and end times must be rejected
+test("Boundary: identical shift start and end", async () => {
+    const data = { ...request, requesterEnd: request.requesterStart };
     await checkAPI(data, 400);
 });
 
-// Test 6: Missing receiving employee ID
-test("Missing receiving employee ID", async () => {
-    const data = { ...request, receivingEmployeeId: "" };
-    await checkAPI(data, 400);
+// Test 6: Exactly 40 hours must use standard approval
+test("Boundary: exactly 40 weekly hours", async () => {
+    const data = { ...request, receivingWeeklyHours: 40 };
+    await checkAPI(data, 200, false);
 });
 
