@@ -49,7 +49,7 @@ apiForm.addEventListener("submit", async (event) => {
   formMessage.textContent = "Submitting shift-swap request...";
 
   try {
-    const response = await fetch("/api/shift-swaps", {
+    const response = await fetch("https://abygqwgavh.execute-api.us-east-1.amazonaws.com/api/shift-swaps", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

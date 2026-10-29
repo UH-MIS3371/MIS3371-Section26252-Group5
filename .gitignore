@@ -1,2 +1,6 @@
 .DS_Store
 node_modules/
+# Generated AWS deployment packages
+employee-shift-swap-frontend.zip
+employee-shift-swap-lambda.zip
+amplify-frontend/
