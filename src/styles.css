@@ -192,3 +192,34 @@ button:focus-visible {
     font-size: 1.75rem;
   }
 }
+/* Keep the form and date fields within the screen */
+.swap-page {
+  margin: 0;
+}
+
+.swap-page,
+.swap-page *,
+.swap-page *::before,
+.swap-page *::after {
+  box-sizing: border-box;
+}
+
+fieldset,
+fieldset p {
+  min-width: 0;
+}
+
+input,
+select {
+  min-width: 0;
+  max-width: 100%;
+}
+
+input[type="datetime-local"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding-inline: 0.65rem;
+  appearance: none;
+  -webkit-appearance: none;
+}
